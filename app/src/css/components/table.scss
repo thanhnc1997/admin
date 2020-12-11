@@ -9,8 +9,7 @@
 table {
     width: 100%;
     text-align: left;
-    background: $grey;
-    border: 1px solid $dark2;
+    background: $dark2;
     border-collapse: collapse;
     thead {
         font-weight: 600;
@@ -19,7 +18,19 @@ table {
     th,
     td {
         padding: 10px;
-        border-bottom: 1px solid $dark2;
+        border-bottom: 1px solid $dark;
         white-space: nowrap;
+    }
+    tbody {
+        tr {
+            &:last-child {
+                td {
+                    border: 0;
+                }
+            }
+            &:nth-child(odd) {
+                background: $grey;
+            }
+        }
     }
 }
