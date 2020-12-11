@@ -1,16 +1,31 @@
-import logo from './logo.svg';
 import './css/main.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import SideBar from './components/sidebar';
+import Customers from './components/customers';
+import Orders from './components/orders';
+import Products from './components/products';
+//import Login from './components/login';
 
 function App() {
 	return (
-		<div className="App">
+		<Router>
 			<div className="container">
-				<div className="row">
-					<div className="col-md-3"></div>
-					<div className="col-md-9"></div>
+				<div className="grid-row">
+					<SideBar />
+					<div className="page">
+						<div className="page-header">
+							Xin chào Thanh!
+						</div>
+						<Switch>
+							<Route path="/products" component={Products} />
+							<Route path="/customers" component={Customers} />
+							<Route path="/orders" component={Orders} />
+						</Switch>
+					</div>
 				</div>
 			</div>
-		</div>
+		</Router>
+		//<Login />
 	);
 }
 

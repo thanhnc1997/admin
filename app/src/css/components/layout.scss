@@ -1,0 +1,22 @@
+.page {
+    border-radius: 10px;
+    background: $dark2;
+    &-header,
+    &-content {
+        padding: 15px;
+    }
+    &-header {
+        text-align: right;
+    }
+    &-content {
+        border-top: 1px solid $grey;
+    }
+}
+
+.login {
+    max-width: 300px;
+    margin: 100px auto 0;
+    border-radius: 15px;
+    background: $dark;
+    padding: 15px;
+}

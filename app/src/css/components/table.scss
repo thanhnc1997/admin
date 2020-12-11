@@ -1,0 +1,25 @@
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+.table-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    text-align: left;
+    background: $grey;
+    border: 1px solid $dark2;
+    border-collapse: collapse;
+    thead {
+        font-weight: 600;
+        background: $dark;
+    }
+    th,
+    td {
+        padding: 10px;
+        border-bottom: 1px solid $dark2;
+        white-space: nowrap;
+    }
+}
