@@ -1,0 +1,57 @@
+[class*='col-'] {
+    padding: 0 10px;
+}
+$column: 12;
+$unit: '%';
+@for $i from 1 through $column {
+    .col-#{$i} {
+        flex: 0 0 (100 / ($column / $i)) #{$unit};
+        max-width: (100 / ($column / $i)) #{$unit};
+    }
+}
+
+@media (min-width: 768px) {
+    @for $i from 1 through $column {
+        .col-#{$i}-md {
+            flex: 0 0 (100 / ($column / $i)) #{$unit};
+            max-width: (100 / ($column / $i)) #{$unit};
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    @for $i from 1 through $column {
+        .col-#{$i}-lg {
+            flex: 0 0 (100 / ($column / $i)) #{$unit};
+            max-width: (100 / ($column / $i)) #{$unit};
+        }
+    }
+}
+.row {
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+//
+//
+//
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mx-auto {
+    margin: auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
