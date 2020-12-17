@@ -11,6 +11,19 @@
     &-content {
         border-top: 1px solid $grey;
     }
+    .content-header {
+        display: flex;
+        align-items: center;
+        h3 {
+            margin-right: auto;
+        }
+        .btn {
+            margin-right: 10px;
+        }
+        input {
+            width: 200px;
+        }
+    }
 }
 
 .login {
@@ -19,6 +32,9 @@
     border-radius: 15px;
     background: $dark;
     padding: 15px;
+    .btn {
+        width: 100%;
+    }
 }
 .page-title {
     font-size: 18px;

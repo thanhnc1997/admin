@@ -3,18 +3,29 @@
     width: 100%;
     border: 0;
     border-radius: 5px;
-    padding: 12px 10px;
+    padding: 8px 10px;
     color: $light;
     background: $deep_dark;
 }
 .btn {
     display: block;
-    width: 100%;
     background: $grey;
     color: $deep_dark;
     text-align: center;
-    padding: 12px 10px;
+    padding: 8px 10px;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    &.edit {
+        background: $light;
+    }
+    &.delete {
+        background: $dark;
+        color: $light;
+    }
+}
+.error {
+    color: $danger;
+    display: block;
+    margin-bottom: 5px;
 }

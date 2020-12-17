@@ -1,32 +1,21 @@
-import './css/main.scss';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import SideBar from './components/sidebar';
-import Customers from './components/customers';
-import Orders from './components/orders';
-import Products from './components/products';
-//import Login from './components/login';
+
+import './css/main.scss';
+import Login from './components/login';
+import Main from './components/main';
 
 function App() {
-	return (
-		<Router>
-			<div className="container">
-				<div className="grid-row">
-					<SideBar />
-					<div className="page">
-						<div className="page-header">
-							Xin chào Thanh!
-						</div>
-						<Switch>
-							<Route path="/products" component={Products} />
-							<Route path="/customers" component={Customers} />
-							<Route path="/orders" component={Orders} />
-						</Switch>
-					</div>
-				</div>
-			</div>
-		</Router>
-		//<Login />
-	);
+  return (
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <Route path="/" component={Main} />
+        </Switch>
+      </Router>
+    </>
+  );
 }
 
 export default App;
